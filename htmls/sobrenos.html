@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawradise - Sobre nós</title>
+    <link rel="stylesheet" href="/Styles/sobrenos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <div id="header-placeholder"></div>
+        <script>
+            fetch("/htmls/header.html")
+            .then(res => res.text())
+            .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+      });
+        </script>
+    
+    <main>
+        <ul class="sobre">
+            <h2>Sobre nossa Empresa</h2>
+            <div class="descricao">
+                <p>
+                    A Pawradise é a loja virtual feita pra você encontrar aquilo que seu pet precisa. Encontre brinquedos, remédios, rações, roupas para pets, coleiras, gaiolas e muito mais. Encontre o que seu melhor amigo pode precisar em um só lugar.
+                </p>
+                <p>
+                    A Pawradise é um trabalho interdisciplinar para a matéria de UI/UX, do curso de Análise e Desenvolvimento de Sistemas, no terceiro período do Centro Universitário Tiradentes.
+                    Todo o projeto foi construído com o intuito de suprir necessidades acadêmicas, sem fins lucrativos ou comerciais, nem direitos autorais.
+                </p>
+            </div>
+            <div class="dados">
+                <div><strong>2k+</strong><br>Clientes felizes</div>
+                <div><strong>72</strong><br>Marcas parceiras</div>
+                <div><strong>1.8k+</strong><br>Produtos</div>
+                <div><strong>2</strong><br>Meses no ramo</div>
+            </div>
+        </ul>
+        <ul class="equipe">
+            <h2>Nossa Equipe</h2>
+            <div class="membros">
+                <div class="membro">
+                    <img src="/images/sobrenos/deivid.jpg" alt="Deivid Gonçalves">
+                    <h3>Deivid Gonçalves</h3>
+                    <p>Software Enginieer</p>
+                </div>
+                <div class="membro">
+                    <img src="/images/sobrenos/jackson.jpg" alt="Henrique Albuquerque">
+                    <h3>Henrique Albuquerque</h3>
+                    <p>Header - UI/UX designer - Frontend dev</p>
+                </div>
+                <div class="membro">
+                    <img src="/images/sobrenos/henrique.png" alt="Henrique Fernandes">
+                    <h3>Henrique Fernandes</h3>
+                    <p>Header - UI/UX designer - Frontend dev - Software Enginieer</p>
+                </div>
+                <div class="membro">
+                    <img src="/images/sobrenos/clara.png.jpg" alt="Maria Clara Justiano">
+                    <h3>Maria Clara Justiano</h3>
+                    <p>Header - UI/UX designer</p>
+                </div>
+                <div class="membro">
+                    <img src="/images/sobrenos/vanessa.png" alt="Vanessa Vitória">
+                    <h3>Vanessa Vitória</h3>
+                    <p>UI/UX designer</p>
+                </div>
+                <div class="membro">
+                    <img src="/images/sobrenos/hebert.jpg" alt="Herbet Lira">
+                    <h3>Herbet Lira</h3>
+                    <p>UI/UX designer - Frontend dev</p>
+                </div>
+            </div>
+        </ul>
+    </main>
+  <script>
+    fetch("/htmls/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

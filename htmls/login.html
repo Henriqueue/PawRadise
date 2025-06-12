@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawradise - Cadastro</title>
+    <link rel="stylesheet" href="/Styles/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+  <script>
+    fetch("/htmls/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script> 
+    <main>
+        <section class="image-section">
+            <img src="/images/cadastro/imagemCachoro.jpg"Cachorro">
+        </section>
+
+        <section class="form-section">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Insira seu endereço de E-mail ou nome de usuário">
+                <input type="password" placeholder="Insira sua senha ">
+                <a href="/htmls/perfil.html" class="link-button">Entrar</a>
+            </form>
+            <p>Não tem uma conta? <a href="/htmls/conta.html">Criar conta</a></p>
+            <div class="social-login">
+                <button class="google">
+                <img src="/images/login/google.svg" alt="Google" class="icon">
+                Cadastrar com o Google
+            </button>
+                <button class="facebook">
+                <img src="/images/login/facebook.svg" alt="Facebook" class="icon">
+                Cadastrar com o Facebook
+            </button>
+        </div>
+        </section>
+    </main>
+</body>
+</html>

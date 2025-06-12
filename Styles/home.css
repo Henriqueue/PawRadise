@@ -1,0 +1,397 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif; 
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 500px;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* melhor leitura */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text .btn {
+  background-color: #ff9800;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background-color: #e07b00;
+}
+
+.como-usar-pet {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.como-usar-pet h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.blocos-pet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bloco-pet {
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.bloco-pet:hover {
+  transform: scale(1.05);
+}
+
+.bloco-pet img {
+  width: 100%;
+  height: 520px;
+  
+  object-fit: cover;
+}
+
+.texto-bloco {
+  padding: 1rem;
+}
+
+.texto-bloco h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto-bloco p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.botao-loja {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-loja:hover {
+  background-color: #444;
+}
+
+.destaques {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.destaque-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.destaque-track {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.produto {
+  flex: 0 0 33.333%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.produto img {
+  width: 150px;
+  height: 200px;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+}
+
+.produto h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.produto p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.produto .preco {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.produto .comprar {
+  background-color: white;
+  border: 2px solid #004aad;
+  color: #004aad;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.produto .comprar:hover {
+  background-color: #004aad;
+  color: white;
+}
+
+/* CATEGORIAS */
+.categorias {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.categoria-lista {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.categoria {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoria span {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+}
+
+.categoria::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.categoria:hover::before {
+  transform: scale(1.1);
+}
+
+.categoria-caes {
+  background-image: url('/images/home/cachorros.jpg'); /* Coloque a imagem certa aqui */
+}
+
+.categoria-gatos {
+  background-image: url('/images/home/gatos.jpg'); /* Coloque a imagem certa aqui */
+}
+
+/* COMENTÁRIOS */
+.comentarios {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.comentarios h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carrossel-comentarios {
+  display: flex;
+  gap: 2rem;
+  animation: deslizar 25s linear infinite;
+  width: max-content;
+}
+
+.comentario {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 300px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.comentario p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comentario h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.comentario-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+
+.estrelas {
+  color: #ff9800;
+  font-size: 1.2rem;
+}
+
+/* Animação */
+@keyframes deslizar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* PET DO MÊS */
+.pet-do-mes {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.pets-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.pet {
+  background-color: rgb(0, 0, 0);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pet:hover {
+  transform: scale(1.05);
+}
+
+.pet img {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.pet h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.pet p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.pet-chamada {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .carrossel-comentarios {
+    animation-duration: 50s;
+  }
+
+  .comentario {
+    width: 250px;
+  }
+
+  .pet-chamada {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+

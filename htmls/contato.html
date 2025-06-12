@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawradise - Contato</title>
+    <link rel="stylesheet" href="/Styles/contato.css">
+     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<div id="header-placeholder"></div>
+  <script>
+    fetch("/htmls/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+    <section class="contact">
+        <form class="contact-form">
+            <h3>Digte seu nome e sobrenome</h3>
+            <input type="text" placeholder="Nome e sobrenome">
+            <h3>Digite seu Endereço de E-Mail</h3>
+            <input type="text" placeholder="Endereço de E-mail">
+            <h3>Digite sua mensagem</h3>
+            <textarea placeholder="Mensagem"></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        <div class="contact-info">
+            <h2>Entre em Contato com a gente</h2>
+            <p>Nossos especialistas podem tirar suas todas as suas dúvidas relacionadas aos produtos ou à entrega.</p>
+            <ul>
+                <li>📍 6666, VaiVer se To lá na Esquina, PE, 40028-922</li>
+                <li>📧 pawradise@gmail.com</li>
+                <li>📞 +00 0000-0000</li>
+                <li>🕐 Seg - Sex: 10AM - 10PM</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="map">
+        <h1 class="Texto-mapa">Encontre a gente na loja mais próxima de você</h1>
+        <img src="/images/contato/Mapa-Localização.png" alt="Mapa Localização">
+    </section>
+   
+    <div id="footer-placeholder"></div>
+  
+  <script>
+    fetch("/htmls/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

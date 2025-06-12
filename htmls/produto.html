@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ração Premium para Cães Adultos | PetShop Feliz</title>
+  <link rel="stylesheet" href="/Styles/produto.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <div id="header-placeholder"></div>
+  <script>
+    fetch("/htmls/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script> 
+  <main class="container">
+    <section class="produto">
+      <div class="produto-imagens">
+        <img src="/images/produto/ração-frente.jpg" alt="Ração para cachorro" class="imagem-principal" />
+        <div class="miniaturas">
+         <img src="/images/produto/ração-frente.jpg" alt="Miniatura 0" />
+          <img src="/images/produto/ração-costas.jpg" alt="Miniatura 1" />
+          <img src="/images/produto/ração-info.jpg" alt="Miniatura 2" />
+          <img src="/images/produto/ração-info-02.jpg" alt="Miniatura 3" />
+         <img src="/images/produto/ração-tabela.jpg" alt="Miniatura 4" />
+        </div>
+      </div>
+
+      <div class="produto-detalhes">
+        <h2>Ração Premium para Cães Adultos - 10kg</h2>
+
+        <div class="preco-container">
+          <p class="preco-atual">R$ 325,90</p>
+          <p class="preco-antigo">R$ 540,00</p>
+        </div>
+
+<button class="btn-comprar" onclick="irParaCarrinho()">Comprar Agora</button>
+
+        <div class="descricao-abas">
+          <nav class="abas-nav">
+            <button class="aba ativa" data-alvo="descricao">Descrição</button>
+            <button class="aba" data-alvo="ingredientes">Ingredientes</button>
+            <button class="aba" data-alvo="avaliacoes">Avaliações</button>
+          </nav>
+
+          <div id="descricao" class="aba-conteudo ativo">
+            <p>Ração super premium com ingredientes naturais, sem corantes e conservantes, ideal para cães adultos de médio e grande porte. Contém proteínas de alta qualidade para manter a saúde e vitalidade do seu pet.</p>
+          </div>
+
+          <div id="ingredientes" class="aba-conteudo">
+            <ul>
+              <li>Farinha de frango</li>
+              <li>Arroz integral</li>
+              <li>Óleo de peixe</li>
+              <li>Vitaminas e minerais</li>
+              <li>Fibras naturais</li>
+            </ul>
+          </div>
+
+          <div id="avaliacoes" class="aba-conteudo">
+            <div class="avaliacao">
+              <p><strong>João S.</strong> <span class="estrelas">★★★★☆</span></p>
+              <p>Meu cachorro adorou! A ração é de ótima qualidade.</p>
+            </div>
+            <div class="avaliacao">
+              <p><strong>Maria L.</strong> <span class="estrelas">★★★★★</span></p>
+              <p>Entrega rápida e produto excelente.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="info-entrega">
+          <strong>Entrega:</strong> Frete grátis para compras acima de R$150,00.<br/>
+          <strong>Troca e devolução:</strong> Aceitamos troca em até 7 dias após o recebimento.
+        </p>
+      </div>
+    </section>
+  </main>
+<div id="footer-placeholder"></div>
+<script>
+  function irParaCarrinho() {
+    window.location.href = "/htmls/carrinho.html";
+  }
+</script>
+
+<script>
+  const miniaturas = document.querySelectorAll('.miniaturas img');
+  const imagemPrincipal = document.querySelector('.imagem-principal');
+
+  miniaturas.forEach(miniatura => {
+    miniatura.addEventListener('click', () => {
+      imagemPrincipal.src = miniatura.src;
+    });
+  });
+</script>
+
+  <script>
+    fetch("/htmls/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+  <script>
+    // Script simples para trocar abas
+    const abas = document.querySelectorAll('.aba');
+    const conteudos = document.querySelectorAll('.aba-conteudo');
+
+    abas.forEach(aba => {
+      aba.addEventListener('click', () => {
+        abas.forEach(a => a.classList.remove('ativa'));
+        aba.classList.add('ativa');
+
+        conteudos.forEach(c => c.classList.remove('ativo'));
+        const alvo = document.getElementById(aba.dataset.alvo);
+        alvo.classList.add('ativo');
+      });
+    });
+  </script>
+</body>
+</html>

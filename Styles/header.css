@@ -1,0 +1,165 @@
+/* Define a fonte padrão para toda a página */
+body {
+  font-family: 'Nunito', sans-serif; /* Fonte personalizada Nunito */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
+  box-sizing: border-box; /* Inclui padding e border no cálculo de tamanho */
+}
+
+/* Estiliza o topo com informações de contato */
+.top-info {
+  background-color: #f7f7f7; /* Cor de fundo clara */
+  padding: 0.5rem 2rem; /* Espaçamento interno */
+  display: flex; /* Alinha os itens na mesma linha */
+  justify-content: space-between; /* Espaça igualmente */
+  font-size: 0.9rem; /* Tamanho de fonte menor */
+}
+
+/* Estiliza o container principal do header */
+.main-header {
+  padding: 1rem 2rem; /* Espaçamento interno */
+  background-color: white; /* Fundo branco */
+  display: flex; /* Flexbox para alinhamento */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Espaça entre logo e ações */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve para profundidade */
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 200px;
+}
+
+/* Estiliza a logo e o nome */
+.logo {
+  display: flex; /* Alinha imagem e texto na mesma linha */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.logo img {
+  width: 80px; /* Define largura da logo */
+  margin-right: 0.5px; /* Espaço entre imagem e texto */
+}
+
+/* Estiliza o menu de navegação */
+nav a {
+  font-size: 20px;
+  margin: 0 1rem; /* Espaçamento horizontal entre links */
+  text-decoration: none; /* Remove sublinhado */
+  color: #333; /* Cor do texto */
+  font-weight: 700; /* Negrito */
+  position: relative; /* Para posicionar o destaque abaixo */
+}
+
+/* Destaca o link ativo */
+nav a:hover::after, nav a.active::after {
+  content: ''; /* Gera elemento decorativo */
+  display: block;
+  height: 2px; /* Altura da linha */
+  width: 100%; /* Largura total */
+  background: orange; /* Cor da linha */
+  position: absolute; 
+  bottom: -5px; /* Posição abaixo do texto */
+  left: 0;
+}
+
+/* Estiliza a barra de busca */
+.search-bar {
+  display: flex; /* Alinha input e botão lado a lado */
+  background: #f1f1f1; /* Cor de fundo suave */
+  border-radius: 20px; /* Bordas arredondadas */
+  overflow: hidden; /* Evita que elementos saiam do container */
+  width: 300px; /* ou 100%, ou outro valor */
+  height: 40px; /* opcional: aumenta a altura */
+}
+
+.search-bar input {
+  flex: 1; /* Faz o input ocupar o espaço disponível */
+  border: none; /* Remove borda padrão */
+  padding: 0.5rem; /* Espaçamento interno */
+  outline: none; /* Remove contorno ao focar */
+  background: transparent; /* Fundo transparente */
+  font-size: 16px; /* Aumenta o tamanho da fonte, opcional */
+}
+
+.search-bar button {
+  background: none; /* Sem cor de fundo */
+  border: none; /* Remove borda */
+  padding: 0.5rem; /* Espaçamento interno */
+  cursor: pointer; /* Muda cursor ao passar por cima */
+}
+
+/* Estiliza os ícones de ações */
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  margin-left: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Estiliza o contador do carrinho */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: orange;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+
+
+/* Botão hambúrguer padrão: escondido */
+.hamburger {
+  display: none; /* Some em telas grandes */
+  font-size: 2rem; /* Tamanho grande */
+  background: none; /* Sem cor */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Mãozinha */
+}
+
+/* Menu padrão: visível */
+nav {
+  display: flex; /* Horizontal */
+}
+
+/* MENU RESPONSIVO */
+@media (max-width: 768px) {
+  /* Mostra o botão hamburguer */
+  .hamburger {
+    display: block;
+  }
+
+  /* Esconde o menu padrão */
+  nav {
+    display: none; /* Some o menu */
+    flex-direction: column; /* Quando abrir, vai ser coluna */
+    background: white;
+    position: absolute;
+    top: 70px; /* Abaixo do header */
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    padding: 1rem;
+  }
+
+  /* Quando o menu estiver ativo */
+  nav.active {
+    display: flex; /* Mostra */
+  }
+}
+

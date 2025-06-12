@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawradise - Cadastro</title>
+    <link rel="stylesheet" href="/Styles/conta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <div id="header-placeholder"></div>
+  <script>
+    fetch("/htmls/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script> 
+    <main>
+        <section class="image-section">
+            <img src="/images/login/imagemGato.jpg" alt="Gato">
+        </section>
+
+        <section class="form-section">
+            <h2>Criar uma Conta gratuitamente</h2>
+            <form>
+<form>
+    <input type="text" placeholder="Insira seu nome aqui">
+    <input type="email" placeholder="Insira seu E-mail aqui">
+    <input type="password" placeholder="Insira sua senha aqui">
+
+<div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+    
+    <label for="togglePet">Deseja cadastrar seu pet?</label>
+    <input type="checkbox" id="togglePet">
+</div>
+
+    <div id="petContainer" style="display: none; margin-top: 15px;">
+    <div class="pet-section">
+        <input type="text" placeholder="Nome do Pet">
+        
+        <select>
+            <option disabled selected>Espécie</option>
+            <option>Cachorro</option>
+            <option>Gato</option>
+        </select>
+
+        <input type="number" placeholder="Idade (em anos)">
+        
+        <select>
+            <option disabled selected>Porte</option>
+            <option>Pequeno</option>
+            <option>Médio</option>
+            <option>Grande</option>
+        </select>
+
+        <input type="text" placeholder="Raça">
+
+        <textarea placeholder="Informações específicas: castrado, deficiências, alergias, etc." rows="4" style="resize: none;"></textarea>
+    </div>
+
+    <button type="button" id="addPet" style="margin-top: 10px;">Adicionar outro pet</button>
+</div>
+    
+    <button type="submit">Criar conta</button>
+    </form>
+    <script src="/Scripts/cadastPet.js"></script>
+            <p>Já tem uma conta? <a href="/htmls/login.html">Entrar</a></p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawradise - Carrinho</title>
+  <link rel="stylesheet" href="/Styles/carrinho.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+  <body>
+      <div id="header-placeholder"></div>
+  <script>
+    fetch("/htmls/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script> 
+    <main>
+  <section class="cart-section">
+    <h2>Continuar com a compra</h2>
+    <p class="cart-status">Você tem <strong>3 produtos</strong> no carrinho</p>
+ <div class="cart-items">
+      <div class="cart-item">
+        <img src="/images/produto/ração-frente.jpg" alt="ração">
+        <div>
+          <p class="title">Ração</p>
+          <p class="brand">Pedrigree</p>
+        </div>
+        <div class="qty-price">
+          <span>R$325,00</span>
+          <input type="number" value="1" min="0">
+        </div>
+        <button class="remove">🗑️</button>
+      </div>
+    <div class="cart-items">
+      <div class="cart-item">
+        <img src="/images/carrinho/Coleira.jpg" alt="Coleira">
+        <div>
+          <p class="title">Coleira</p>
+          <p class="brand">Pawradise</p>
+        </div>
+        <div class="qty-price">
+          <span>R$30,00</span>
+          <input type="number" value="1" min="0">
+        </div>
+        <button class="remove">🗑️</button>
+      </div>
+      <div class="cart-item">
+        <img src="/images/carrinho/Gaiola.webp" alt="Gaiola">
+        <div>
+          <p class="title">Gaiola</p>
+          <p class="brand">Pawradise</p>
+        </div>
+        <div class="qty-price">
+          <span>R$1.587,67</span>
+          <input type="number" value="1" min="0">
+        </div>
+        <button class="remove">🗑️</button>
+      </div>
+      <div class="cart-item">
+        <img src="/images/carrinho/Arranhador.webp" alt="Arranhador">
+        <div>
+          <p class="title">Arranhador</p>
+          <p class="brand">Pawradise</p>
+        </div>
+        <div class="qty-price">
+          <span>R$83,38</span>
+          <input type="number" value="1" min="0">
+        </div>
+        <button class="remove">🗑️</button>
+      </div>
+    </div>
+</div>
+    <div class="empty-cart" style="display: none;">
+      <p>Seu carrinho está vazio 🛒</p>
+    </div>
+  </section>
+
+  <aside class="payment-section">
+    <h3>Tipo do cartão</h3>
+    <div class="card-types">
+      <img src="/images/carrinho/formasDePagamento/MasterCard.png" alt="MasterCard">
+      <img src="/images/carrinho/formasDePagamento/Visa.png" alt="Visa">
+      <img src="/images/carrinho/formasDePagamento/RuPay.png" alt="RuPay">
+    </div>
+    <form>
+      <input type="text" placeholder="Nome do titular" required>
+      <input type="text" placeholder="Número do cartão" required>
+      <div class="form-row">
+        <input type="text" placeholder="mm/yy" required>
+        <input type="text" placeholder="CVV" required>
+      </div>
+      <div class="summary">
+        <p>Sub-Total <span>R$ 1.711,05</span></p>
+        <p>Frete <span>R$ 40,00</span></p>
+        <p class="total">Total (Tax. incl.) <span>R$ 1.751,05</span></p>
+      </div>
+      <button type="submit" class="continue-btn">R$ 1.751,05 <span>Continuar ➡️</span></button>
+      <p style="font-size: 0.9em;">ou em até <strong>10x R$175,10</strong> sem juros</p>
+      <script src="/Scripts/cart.js"></script>
+    </form>
+  </aside>
+</main>
+
+  </body>
+</html>

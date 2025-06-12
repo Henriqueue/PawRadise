@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<link rel="stylesheet" href="/Styles/home.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<body>
+   <div id="header-placeholder"></div>
+  <script>
+    fetch("/htmls/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script> 
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="/images/home/cao_e_gato.jpg" alt="Animais fofos" class="hero-image">
+      <div class="hero-text">
+        <h1>Encontre o Melhor para o seu Melhor amigo</h1>
+        <a href="loja.html" class="btn">Ir para a loja</a>
+      </div>
+    </section>
+
+<section class="como-usar-pet">
+  <h2>Encontre o que Precisa</h2>
+  <div class="blocos-pet">
+    <div class="bloco-pet">
+      <img src="/images/home/cachorro_tomando_remedio.jpg" alt="Remédios para pets">
+      <div class="texto-bloco">
+        <h3>1. Remédios</h3>
+        <p>Cuide da saúde do seu pet com medicamentos confiáveis.</p>
+      </div>
+    </div>
+    <div class="bloco-pet">
+      <img src="/images/home/cachorro_comendo.jpg" alt="Rações para pets">
+      <div class="texto-bloco">
+        <h3>2. Rações</h3>
+        <p>Nutrição completa para cães, gatos e muito mais.</p>
+      </div>
+    </div>
+    <div class="bloco-pet">
+      <img src="/images/home/gato_de_roupinhas.jpg" alt="Acessórios para pets">
+      <div class="texto-bloco">
+        <h3>3. Acessórios</h3>
+        <p>Coleiras, caminhas, roupinhas, brinquedos e mais.</p>
+      </div>
+    </div>
+  </div>
+  <a href="#loja" class="botao-loja">IR PARA A LOJA</a>
+</section>
+ <!-- Comentários dos Clientes -->
+<!-- Comentários dos Clientes -->
+<section class="comentarios">
+  <h2>O que nossos clientes dizem</h2>
+  <div class="carrossel-comentarios">
+ <div class="comentario">
+  <img src="/images/home/Comentários/brinquedo.jpeg" alt="Produto comprado por Ana L." class="comentario-img">
+  <p>"Simplesmente perfeita! Meus dentes nunca pareceram tão limpos."</p>
+  <h3>ANA L.</h3>
+  <div class="estrelas">★★★★★</div>
+</div>
+    <div class="comentario">
+      <img src="/images/home/Comentários/vaquinha.webp" alt="Produto comprado por Carlos M." class="comentario-img">
+      <p>"A embalagem é linda e sustentável, recomendo demais."</p>
+      <h3>CARLOS M.</h3>
+      <div class="estrelas">★★★★★</div>
+    </div>
+    <div class="comentario">
+      <img src="/images/home/Comentários/sache.webp" alt="Produto comprado por Mariana T." class="comentario-img">
+      <p>"O sabor é suave e agradável. Me surpreendeu muito!"</p>
+      <h3>MARIANA T.</h3>
+      <div class="estrelas">★★★★★</div>
+    </div>
+    <div class="comentario">
+      <img src="/images/home/Comentários/banda.jpg" alt="Produto comprado por João V." class="comentario-img">
+      <p>"Produto incrível. E a espuma é igual às pastas convencionais."</p>
+      <h3>JOÃO V.</h3>
+      <div class="estrelas">★★★★★</div>
+    </div>
+    <div class="comentario">
+      <img src="/images/home/Comentários/remedio.jpg" alt="Produto comprado por Larissa G." class="comentario-img">
+      <p>"Sustentável e eficaz. Adotei de vez."</p>
+      <h3>LARISSA G.</h3>
+      <div class="estrelas">★★★★★</div>
+    </div>
+    <div class="comentario">
+      <img src="/images/home/Comentários/caminha.webp" alt="Produto comprado por Fernanda R." class="comentario-img">
+      <p>"Além de boa, veio super bem embalada. Adorei o carinho!"</p>
+      <h3>FERNANDA R.</h3>
+      <div class="estrelas">★★★★★</div>
+    </div>
+  </div>
+  <!-- Pet do Mês -->
+<section class="pet-do-mes">
+  <h2>Pets do Mês</h2>
+  <div class="pets-container">
+    <div class="pet">
+      <img src="/images/home/cao_do_mes.jpg" alt="Cão do mês">
+      <h3>Thor</h3>
+      <p style="color: rgb(255, 255, 255)">Nosso doguinho do mês! Adora correr no parque e brincar com bolinhas.</p>
+    </div>
+    <div class="pet">
+      <img src="/images/home/gato_do_mes.jpg" alt="Gato do mês">
+      <h3>Luna</h3>
+      <p style="color: rgb(255, 255, 255)" >Nossa gatinha estrela! Adora sonecas ao sol e carinho na barriga (às vezes).</p>
+    </div>
+  </div>
+  <p style="color: rgb(255, 255, 255)" class="pet-chamada">
+    Quer que seu pet apareça aqui? Participe também! <br>
+    Compre um de nossos produtos, tire uma foto com seu pet e mande para nós pelo nosso E-mail.
+  </p>
+</section>
+</section>
+
+    <!-- Carrossel de Produtos em Destaque -->
+<section class="destaques">
+  <h2>Produtos em Destaque</h2>
+  <div class="carousel destaque-carousel">
+    <div class="carousel-track destaque-track">
+      <div class="produto">
+        <img src="/images/home/loja/drools.jpg" alt="Drools 3KG">
+        <h3>Drools | 3KG</h3>
+        <p>Ração para cães adultos, sabor galinha e ovo, 3 kg, seco.</p>
+        <span class="preco">R$ 75,00</span>
+        <button class="comprar">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="/images/home/loja/vaquinha.jpeg" alt="fantasia">
+        <h3>Fantasia de vaquinha para Cães pequenos</h3>
+        <p>Fantasia de vaquinha da Giig roupas para pets, para cães de pequeno porte</p>
+        <span class="preco">R$ 180,00</span>
+        <button class="comprar">Comprar</button>
+      </div>
+     <div class="produto">
+        <img src="/images/home/loja/biscrok.jpg" alt="Biscork Pedigree">
+        <h3>Biscork Biscuits Pedigree</h3>
+        <p>Biscoitos para cães, qualquer raça, sabor carne-seca, 500g, seco.</p>
+        <span class="preco">R$ 19,90</span>
+        <button class="comprar">Comprar</button>
+      </div>
+        <div class="produto">
+        <img src="/images/home/loja/canineCreek.jpg" alt="Canine Creek 4KG">
+        <h3>Canine Creek 4 KG</h3>
+        <p>Ração para cães adultos, sabor carne-seca, 4 kg, seco.</p>
+        <span class="preco">R$ 680,00</span>
+        <button class="comprar">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="/images/home/loja/brinquedo.jpeg" alt="brinquedo">
+        <h3>Biscork Biscuits Pedigree</h3>
+        <p>Biscoitos para cães, qualquer raça, sabor carne-seca, 500g, seco.</p>
+        <span class="preco">R$ 19,90</span>
+        <button class="comprar">Comprar</button>
+      </div>
+          <div class="produto">
+        <img src="/images/home/loja/brinquedo.jpeg" alt="brinquedo">
+        <h3>Biscork Biscuits Pedigree</h3>
+        <p>Biscoitos para cães, qualquer raça, sabor carne-seca, 500g, seco.</p>
+        <span class="preco">R$ 19,90</span>
+        <button class="comprar">Comprar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Categorias por Animal -->
+ <section class="categorias">
+  <h2>Encontre por Categoria</h2>
+  <div class="categoria-lista">
+    <div class="categoria categoria-caes">
+      <span>Cães</span>
+    </div>
+    <div class="categoria categoria-gatos">
+      <span>Gatos</span>
+    </div>
+  </div>
+</section>
+<div id="footer-placeholder"></div>
+  <script>
+    fetch("/htmls/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<link rel="stylesheet" href="/Styles/perfil.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<body>
+       <div id="header-placeholder"></div>
+  <script>
+    fetch("/htmls/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script> 
+<div class="profile-container">
+  <div class="profile-left">
+    <img src="/images/sobrenos/paulo.jpg" alt="Foto de Perfil" class="profile-pic">
+    <div class="profile-info">
+      <p><strong>Nome:</strong> Henrique Silva</p>
+      <p><strong>Email:</strong> henrique@email.com</p>
+      <p><strong>Endereço:</strong> Rua das Rosas, 123 - Jardim Feliz</p>
+    </div>
+  </div>
+
+  <div class="profile-right">
+    <h2>Área do Usuário</h2>
+    <ul class="profile-options">
+      <li><button onclick="mostrarConteudo('animais')">🐶 Animais cadastrados</button></li>
+      <li><button onclick="mostrarConteudo('pedidos')">📦 Acompanhar pedido</button></li>
+      <li><button onclick="mostrarConteudo('ultimos')">🕓 Últimos pedidos</button></li>
+      <li><button onclick="mostrarConteudo('comentarios')">💬 Comentários</button></li>
+      <li><button onclick="mostrarConteudo('cupons')">🎟️ Meus cupons</button></li>
+    </ul>
+
+    <div class="conteudo-dinamico">
+      <div id="animais" class="conteudo">
+        <h3>Seus Pets</h3>
+        <div class="pets">
+          <div class="pet-card"><img src="/images/Perfil/Giussepe.png"><p>Giussepe - Bobtail Am</p></div>
+          <div class="pet-card"><img src="/images/Perfil/Manuelli.jpeg"><p>Manuelli - Bull Terier</p></div>
+          <div class="pet-card"><img src="/images/Perfil/logan.jpeg"><p>Logan - Labrador</p></div>
+        <div class="pet-card"><img src="/images/Perfil/paulo.webp"><p>Paulo - vira-lata</p></div>
+        </div>
+      </div>
+
+      <div id="pedidos" class="conteudo" style="display:none;">
+        <h3>Pedido atual</h3>
+              <div class="pedido-card">
+            <img src="/images/Perfil/cama.png" alt="cama">
+            <div>
+            <p><strong>Produto:</strong> Cama para gatos</p>
+            <p><strong>Data:</strong> 12/06/2025 -Em trânsito</p>
+            </div>
+        </div>
+      </div>
+
+      <div id="ultimos" class="conteudo" style="display:none;">
+        <h3>Últimos pedidos</h3>
+        <div class="pedido-card">
+            <img src="/images/Perfil/arranhador.jpg" alt="Arranhador">
+            <div>
+            <p><strong>Produto:</strong> Arranhador para Gatos</p>
+            <p><strong>Data:</strong> 02/06/2025</p>
+            </div>
+        </div>
+
+        <div class="pedido-card">
+            <img src="/images/Perfil/coleira.webp" alt="Coleira LED">
+            <div>
+            <p><strong>Produto:</strong> Coleira LED para Cachorros</p>
+            <p><strong>Data:</strong> 28/05/2025</p>
+            </div>
+        </div>
+        <div class="pedido-card">
+            <img src="/images/Perfil/shampoo.webp" alt="Shampoo">
+            <div>
+            <p><strong>Produto:</strong> Shampoo Anti-pulgas</p>
+            <p><strong>Data:</strong> 25/05/2025</p>
+            </div>
+        </div>
+        </div>  
+      <div id="comentarios" class="conteudo" style="display:none;">
+  <h3>Seus comentários</h3>
+
+  <div class="comentario-card">
+    <p><strong>Produto:</strong> Coleira LED para Cachorros</p>
+    <p><strong>Data:</strong> 29/05/2025</p>
+    <p>⭐️⭐️⭐️⭐️⭐️ "A coleira é linda e funciona muito bem à noite!"</p>
+  </div>
+
+  <div class="comentario-card">
+    <p><strong>Produto:</strong> Ração Premium 10kg</p>
+    <p><strong>Data:</strong> 21/05/2025</p>
+    <p>⭐️⭐️⭐️⭐️ "Meu cachorro adorou e chegou antes do prazo!"</p>
+  </div>
+</div>
+      <div id="cupons" class="conteudo" style="display:none;">
+        <h3>Cupons ativos</h3>
+        <p>🎉 CUPOM10 - 10% OFF</p>
+        <p>🎉 FRETEGRÁTIS</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer-placeholder"></div>
+  <script>
+    fetch("/htmls/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+ <script src="/Scripts/perfil.js" defer></script> 
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    font-family: 'Nunito', sans-serif; 
+}
+
+.top-bar {
+    background: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links .active {
+    border-bottom: 2px solid orange;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.icons {
+    font-size: 1.2em;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 30px;
+    background: #fef7f2;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .form-group {
+      display: flex;
+      gap: 20px; /* Espaço entre os campos */
+      align-items: flex-start;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    /* Apenas para centralizar tudo na página (opcional) */
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+.contact-info {
+    width: 40%;
+    text-align: justify;
+}
+
+.contact-info h2 {
+    margin-bottom: 40px;
+}
+
+.contact-info ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.texto-mapa{
+        font-weight: bolder;
+}
+.map {
+
+    padding: 30px;
+    text-align: center;
+}
